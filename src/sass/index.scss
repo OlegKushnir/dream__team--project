@@ -1,11 +1,10 @@
-@import './common';
-@import './example';
 @import './utils/vars';
+@import './utils/mixin';
 @import './common';
 @import './components/header';
 @import './components/hero';
 @import './components/products';
 @import './components/tradition';
-@import './components/review';
+@import './components/galaryfeedback';
 @import './components/locations';
 @import './components/footer';

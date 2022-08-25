@@ -13,8 +13,9 @@
   margin: -1px;
 }
 
-body 
-{  font-family: Montserrat, sans-serif;
+body {
+  font-family: Montserrat, sans-serif;
+  background-color: $bg-green;
 }
 
 h1,
@@ -40,25 +41,44 @@ img {
 }
 
 .container {
-    
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    @media screen and (max-width: 767px) {
-      max-width: 480px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  @media screen and (max-width: 767px) {
+    max-width: 480px;
   }
-    @media screen and (min-width: 768px) {
-        width: 768px;
-        padding-left: 32px;
-        padding-right: 32px;
-    }
-    @media screen and (min-width: 1200px) {
-      
-      width: 1200px;
-      padding-left: 16px;
-      padding-right: 16px;
-    
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
+.btn {
+  display: inline-flex;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 36px;
+  padding-right: 36px;
+  border: none;
+  border-radius: 10px;
 
+  @include font(14px, 600, 1.28, normal);
+
+  cursor: pointer;
+  text-align: center;
+  color: $black-text-color;
+  background-color: $accent-color;
+
+  &:hover, &:focus, &:active {
+    background-color: $btn-actions;
+  }
+  &:disabled {
+    background-color: $btn-disabled;
+  }
+}
