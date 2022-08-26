@@ -1,3 +1,107 @@
-.galary__img {
+.galary {
+  position: relative;
+  background-color: #ffffff;
+  background-image: url(../images/galary_bg_m.png);
+  background-size: cover;
   
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/galary_bg_m@2x.png);
+  }
+
+  @media screen and (min-width: 481px) {
+    background-image: url(../images/galary_bg_t.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url(../images/galary_bg_t@2x.png);
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+
+    background-image: url(../images/galary_bg_d.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url(../images/galary_bg_d@2x.png);
+    }
+  }
+  
+}
+
+.galary__container {
+  padding-top: 166px;
+  padding-bottom: 359px;
+  @media screen and (min-width: 768px) {
+    padding-top: 160px;
+  padding-bottom: 383px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 354px;
+    padding-bottom: 207px;
+  }
+}
+.galary__thumb {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -24px);
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  max-width: 480px;
+
+  @media screen and (min-width: 768px) {
+    transform: translate(-50%, -163px);
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @media screen and (min-width: 1200px) {
+    transform: translate(-50%, -98px);
+    max-width: 1200px;
+    padding-left: 94px;
+    padding-right: 94px;
+  }
+}
+
+.galary__img {
+  border-radius: 24px;
+  overflow: hidden;
+}
+.feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.feedback__portret {
+  display: inline-flex;
+  background-color: $accent-color;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+.feedback__card {
+  padding: 39px 74px;
+  background-color: $bg-green;
+  border-radius: 24px;
+  margin-bottom: 32px;
+  
+  @media screen and (min-width: 768px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 968px;
+  }
+}
+.feedback__text {
+  @include font(16px, 500, 1.86, 0.04em);
+  color: $white-text-color;
+}
+.feedback__title {
+  @include font(16px, 500, 1.86, normal);
+  margin-bottom: 32px;
 }
