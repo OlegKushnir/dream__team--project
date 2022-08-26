@@ -89,10 +89,10 @@
   background-color: $bg-green;
   border-radius: 24px;
   margin-bottom: 32px;
-  
-  @media screen and (min-width: 768px) {
-    width: 100%;
-  }
+  width: 100%;
+  // @media screen and (min-width: 768px) {
+  //   max-width: 704px;
+  // }
   @media screen and (min-width: 1200px) {
     max-width: 968px;
   }
@@ -100,6 +100,7 @@
 .feedback__text {
   @include font(16px, 500, 1.86, 0.04em);
   color: $white-text-color;
+  margin: 0;
 }
 .feedback__title {
   @include font(16px, 500, 1.86, normal);
