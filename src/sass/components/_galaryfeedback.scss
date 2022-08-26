@@ -1,3 +1,44 @@
+.galary {
+    position: relative;
+  background-color: #ffffff;
+  background-image: url(../images/galary_bg_d.png);
+  padding-left: 94px;
+  padding-right: 94px;
+  padding-top: 354px;
+  padding-bottom: 207px;
+}
+.galary__container {
+    
+}
 .galary__img {
-  
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-98px);
+    max-width: 1014px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.feedback__portret {
+  width: 100px;
+  height: 100px;
+  background-color: $accent-color;
+  border-radius: 50%;
+  margin-bottom: 32px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.feedback__card {
+  padding: 39px 74px;
+  background-color: $bg-green;
+  border-radius: 24px;
+  margin-bottom: 32px;
+  @include font(16px, 500, 1.86, 0.04em);
+  color: $white-text-color;
+  text-align: center;
+}
+.feedback__title {
+  @include font(16px, 500, 1.86, normal);
+  text-align: center;
+  margin-bottom: 32px;
 }
