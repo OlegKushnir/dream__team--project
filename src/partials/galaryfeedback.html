@@ -1,23 +1,45 @@
 <section class="galary">
   <div class="container galary__container">
     <div class="galary__thumb">
-      <img class="galary__img" src="./images/galary_img1_d.jpg" alt="Морозиво">
+      <picture>
+        <source
+          media="(min-width: 1200px )"
+          srcset="
+            ./images/galary_img1_d.jpg    1x,
+            ./images/galary_img1_d@2x.jpg 2x
+          "
+        />
+        <source
+          media="(min-width: 768px )"
+          srcset="
+            ./images/galary_img1_t.jpg    1x,
+            ./images/galary_img1_t@2x.jpg 2x
+          "
+        />
+
+        <img
+          class="galary__img"
+          srcset="./images/galary_img1_m.jpg 1x,
+            ./images/galary_img1_m@2x.jpg 2x
+          "
+          src="./images/galary_img1_m.jpg"
+          alt="Морозиво"
+        />
+      </picture>
     </div>
-  
-  
-  <div class="feedback container">
-    <div class="feedback__portret">
-      <img src="./images/feedback1_d.jpg" alt="feedback1">
+
+    <div class="feedback">
+      <div class="feedback__portret">
+        <img src="./images/feedback1_d.jpg" alt="feedback1" />
+      </div>
+      <div class="feedback__card">
+        <p class="feedback__text">
+          I love visiting your cafe. <span class="feedback__line"></span>You prepare the most <span class="feedback__line"></span>delicious ice cream in
+          Los <span class="feedback__line"></span>Angeles! <span class="feedback__line"></span>In addition, you have <span class="feedback__line"></span>beautiful serving, cozy <span class="feedback__line"></span>atmosphere
+          and polite <span class="feedback__line"></span>staff.<span class="feedback__line"></span>
+        </p>
+      </div>
+      <h3 class="feedback__title">Emily, Los Angeles</h3>
     </div>
-    <div class="feedback__card">
-      <p class="feedback__text">
-        I love visiting your cafe. You prepare the most delicious ice cream in
-        Los Angeles! In addition, you have beautiful serving, cozy atmosphere
-        and polite staff.
-      </p>
-      
-    </div>
-    <h3 class="feedback__title">Emily, Los Angeles</h3>
   </div>
-</div>
 </section>
