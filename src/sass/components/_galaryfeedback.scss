@@ -1,9 +1,37 @@
 .galary {
   position: relative;
   background-color: #ffffff;
-  background-image: url(../images/galary_bg_d.png);
+  background-image: url(../images/galary_bg_m.png);
   background-size: cover;
+  
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/galary_bg_m@2x.png);
+  }
+
+  @media screen and (min-width: 481px) {
+    background-image: url(../images/galary_bg_t.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url(../images/galary_bg_t@2x.png);
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+
+    background-image: url(../images/galary_bg_d.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url(../images/galary_bg_d@2x.png);
+    }
+  }
+  
 }
+
 .galary__container {
   padding-top: 166px;
   padding-bottom: 359px;
@@ -61,14 +89,17 @@
   background-color: $bg-green;
   border-radius: 24px;
   margin-bottom: 32px;
-  @include font(16px, 500, 1.86, 0.04em);
-  color: $white-text-color;
+  
   @media screen and (min-width: 768px) {
     width: 100%;
   }
   @media screen and (min-width: 1200px) {
     max-width: 968px;
   }
+}
+.feedback__text {
+  @include font(16px, 500, 1.86, 0.04em);
+  color: $white-text-color;
 }
 .feedback__title {
   @include font(16px, 500, 1.86, normal);
