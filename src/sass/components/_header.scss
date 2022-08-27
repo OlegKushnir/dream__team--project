@@ -63,10 +63,26 @@
     }
 }
 
+.logo {
+    @media screen and (min-width: $desctop) {
+        margin-right: 268px;
+    }
+}
+
 .menu {
+    @media screen and (min-width: $desctop) {
+        @include font(16px, 700, 1.18, normal);
+    }
+
     &__list {
         @media screen and (min-width: $desctop) {
             display: flex;
+        }
+    }
+
+    &__item:not(:last-child) {
+        @media screen and (min-width: $desctop) {
+            margin-right: 27px;
         }
     }
     
