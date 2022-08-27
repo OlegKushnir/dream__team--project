@@ -6,7 +6,7 @@
                     <source srcset="./images/header/logo-60.png 1x, ./images/header/logo-120.png 2x" media="(min-width:1200px)" />
                     <source srcset="./images/header/logo-48.png 1x, ./images/header/logo-96.png 2x" media="(min-width:768px)" />
                     <source srcset="./images/header/logo-40.png 1x, ./images/header/logo-80.png 2x" media="(min-width:320px)" />
-                    <img src="./images/header/logo-40.png" alt="логотип морозиво" width="40" class="logo__image" />
+                    <img src="./images/header/logo-40.png" alt="логотип морозиво" max-width="120" class="logo__image" />
                 </picture>
             </a>
             
@@ -31,16 +31,18 @@
             </nav>
         </div>
 
-        <button class="button button-buy"></button>
-
         <button class="menu__button" type="button" data-menu-button>
             <svg width="32" height="32">
                 <use class="icon-mobile-open" href="./images/svg/icons.svg#icon-mobile-open"></use>
                 <use class="icon-mobile-close" href="./images/svg/icons.svg#icon-mobile-close"></use>
             </svg>
         </button>
-        
-        
+        <button class="btn button-buy">Buy now
+            <svg class="icon-button-buy" width="8" height="12">
+                <use href="./images/svg/icons.svg#icon-button-buy"></use>
+            </svg>
+        </button>
+
         <div class="backdrop is-hidden" >
             <div class="modal">
                 <h2 class="modal__title"></h2>

@@ -1,86 +1,120 @@
 .header__container {
     display: flex;
-    
+    justify-content: space-between;
+
     padding-top: 12px;
     padding-bottom: 11px;
 }
 
-.button-buy {
-    @media screen and (max-width: 767.99px) {
+.header__box {
+    display: flex;
+    flex-direction: column;
+
+    &.is-open .button-buy {
         display: none;
     }
-}
-
-.menu {
-
-
-    @media screen and (max-width: 1199.99px) {
-        display: none;
-        width: 100%;
-        background-color: $bg-green;
-        // padding: 48px 40px;
-    }
-
+    
     &.is-open {
-        display: flex;
-        flex-direction: column;
+        padding: 12px 20px;
         position: fixed;
         top: 0;
         left: 0;
         height: 100vh;
         width: 100vw;
-        justify-content: space-between;
+
+        & .menu {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            @include font(32px, 700, 1.21, normal);
+            margin-top: 50px;
+
+            @media screen and (min-width: $tablet) {
+                @include font(48px, 700, 1.20, normal);
+                margin-top: 75px;
+            }
+        }
+
+        & .menu__item:not(:last-child) {
+            margin-bottom: 32px;
+        }
+
+        
+    }
+}
+
+.menu {
+    @media screen and (max-width: 1199px) {
+        display: none;
+        width: 100%;
+        background-color: $bg-green;
     }
     
     &__button {
         background-color: inherit;
+        border: none;
+        padding: 0;
+
+        &.is-open {
+            position: fixed;
+            top: 15;
+            right: 15;
+
+            & .icon-mobile-close {
+                display: block;
+            }
+
+            & .icon-mobile-open {
+                display: none;
+            }
+        }
     }
 
     &__link {
-        @include font(32px, 700, 1.21, normal);
         color: $light-title-color;
     }
+
+    &__link:hover,
+    &__link:focus {
+        color: $black-text-color;
+    }
 }
 
-.menu.is-open .logo {
-    position: fixed;
-    top: 10;
-    left: 10;
-}
-.menu__button {
-    cursor: pointer;
-    border: none;
-    position: fixed;
-    top: 10;
-    right: 10;
 
-    &.is-open {
-        position: fixed;
-        top: 15;
-        right: 15;
+
+.button-buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    @include font(14px, 600, 1.21, normal);
+
+    @media screen and (max-width: 767px) {
+        display: none;
     }
 
-
+    &:focus {
+        background-color: $btn-disabled;
+    }
 }
 
-.menu__button .icon-mobile-close {
+.icon-button-buy {
+    margin-left: 15px;
+}
+
+.icon-mobile-close {
     display: none;
 }
-
-.menu__button.is-open .icon-mobile-close {
-    display: block;
-}
-
-.menu__button.is-open .icon-mobile-open {
-    display: none;
-}
-
 
 .icon-mobile-open,
 .icon-mobile-close {
     fill: $white-text-color;
-} 
+}
 
-.modal {
+.backdrop {
     display: none;
 }
+
+
+
