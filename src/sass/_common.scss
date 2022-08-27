@@ -40,6 +40,17 @@ img {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   margin: 0 auto;
   padding-left: 20px;
