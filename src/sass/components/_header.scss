@@ -1,0 +1,86 @@
+.header__container {
+    display: flex;
+    
+    padding-top: 12px;
+    padding-bottom: 11px;
+}
+
+.button-buy {
+    @media screen and (max-width: 767.99px) {
+        display: none;
+    }
+}
+
+.menu {
+
+
+    @media screen and (max-width: 1199.99px) {
+        display: none;
+        width: 100%;
+        background-color: $bg-green;
+        // padding: 48px 40px;
+    }
+
+    &.is-open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        justify-content: space-between;
+    }
+    
+    &__button {
+        background-color: inherit;
+    }
+
+    &__link {
+        @include font(32px, 700, 1.21, normal);
+        color: $light-title-color;
+    }
+}
+
+.menu.is-open .logo {
+    position: fixed;
+    top: 10;
+    left: 10;
+}
+.menu__button {
+    cursor: pointer;
+    border: none;
+    position: fixed;
+    top: 10;
+    right: 10;
+
+    &.is-open {
+        position: fixed;
+        top: 15;
+        right: 15;
+    }
+
+
+}
+
+.menu__button .icon-mobile-close {
+    display: none;
+}
+
+.menu__button.is-open .icon-mobile-close {
+    display: block;
+}
+
+.menu__button.is-open .icon-mobile-open {
+    display: none;
+}
+
+
+.icon-mobile-open,
+.icon-mobile-close {
+    fill: $white-text-color;
+} 
+
+.modal {
+    display: none;
+}
