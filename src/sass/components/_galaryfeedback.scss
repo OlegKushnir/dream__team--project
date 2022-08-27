@@ -1,81 +1,83 @@
 .galary {
   position: relative;
-  background-color: #ffffff;
-  background-size: cover;
-  
-  background-image: url(../images/galary_bg_m.png);
-  
-  
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url(../images/galary_bg_m@2x.png);
-  }
-  @media screen and (min-width: 768px) {
-    padding-top: 163px;
-    background-image:none;  
-  }
 
-  @media screen and (min-width: 1200px) {
-    padding-top: 0;
-    background-image: url(../images/galary_bg_d.png);
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(24px);
+    z-index: -1;
+
+    display: flex;
+    content: '';
+    height: 1044px;
+
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-position-x: center;
+
+    background-image: url(../images/galary_bg_m.png);
+
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
+      background-image: url(../images/galary_bg_m@2x.png);
+    }
+    @media screen and (min-width: 768px) {
+      height: 958px;
+      background-position: bottom;
+      transform: translateY(138px);
+
+      background-image: url(../images/galary_bg_t.png);
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/galary_bg_t@2x.png);
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      height: 1000px;
+      background-image: url(../images/galary_bg_d.png);
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
         background-image: url(../images/galary_bg_d@2x.png);
+      }
     }
   }
-  
 }
 
 .galary__container {
-  padding-top: 165px;
-  padding-bottom: 359px;
-  background-size: cover;
-  
-  
+  padding-bottom: 60px;
+
   @media screen and (min-width: 768px) {
-    padding-top: 63px;
-  padding-bottom: 360px;
-  background-image: url(../images/galary_bg_t.png);
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-        background-image: url(../images/galary_bg_t@2x.png);
-    }
+    padding-bottom: 80px;
   }
-  
+
   @media screen and (min-width: 1200px) {
-    background-image: none;
-    padding-top: 452px;
-    padding-bottom: 207px;
+    padding-bottom: 100px;
   }
 }
 .galary__thumb {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -24px);
-  padding-left: 20px;
-  padding-right: 20px;
+  margin-bottom: 60px;
   width: 100%;
   max-width: 480px;
 
   @media screen and (min-width: 768px) {
-    transform: translate(-50%, -163px);
     max-width: 768px;
-    padding-left: 32px;
-    padding-right: 32px;
   }
   @media screen and (min-width: 1200px) {
-    transform: translate(-50%, -98px);
     max-width: 1200px;
-    padding-left: 94px;
-    padding-right: 94px;
+    padding-left: 78px;
+    padding-right: 78px;
+    margin-bottom: 128px;
   }
 }
 
 .galary__img {
+  margin: 0 auto;
   border-radius: 24px;
   overflow: hidden;
 }
@@ -98,15 +100,15 @@
   }
 }
 .feedback__card {
-  padding-top: 43px;
+  padding-top: 42px;
   padding-left: 50px;
   padding-right: 50px;
-  padding-bottom: 17px;
+  padding-bottom: 16px;
   background-color: $bg-green;
   border-radius: 24px;
   margin-bottom: 32px;
   width: 100%;
-  @include font(12px, 400, 1.86, 0.04em);
+  @include font(12px, 400, 2.55, 0.04em);
   color: $light-title-color;
   text-align: center;
   @media screen and (min-width: 768px) {
@@ -124,16 +126,15 @@
 .feedback__line {
   display: block;
   width: 100%;
-  border-bottom: 1px solid #E1E1E1;
+  border-bottom: 1px solid #e1e1e1;
   @media screen and (min-width: 768px) {
-     display: none;
-    }
+    display: none;
+  }
 }
 .feedback__title {
   @include font(20px, 500, 1.86, normal);
   margin-bottom: 32px;
   @media screen and (min-width: 768px) {
     @include font(16px, 500, 1.86, normal);
-   }
+  }
 }
-

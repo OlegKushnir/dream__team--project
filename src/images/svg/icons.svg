@@ -5,5 +5,8 @@
 <symbol id="icon-mobile-close" viewBox="0 0 32 32">
 <path d="M26.667 7.303l-1.97-1.97-7.808 7.808-7.808-7.808-1.97 1.97 7.808 7.808-7.808 7.808 1.97 1.97 7.808-7.808 7.808 7.808 1.97-1.97-7.808-7.808 7.808-7.808z"></path>
 </symbol>
+<symbol id="btn-sign"  viewBox="0 0 8 12">
+<path d="M1.61621 1.59998L6.04388 5.99998L1.61621 10.4" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
 </defs>
 </svg>

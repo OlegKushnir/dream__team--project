@@ -70,6 +70,13 @@ ul {
   }
 }
 
+      // <button class="btn">
+      //   Назва кнопки
+      //   <svg width="10" height="10">
+      //     <use href="./images/svg/icons.svg#btn-sign"></use>
+      //   </svg>
+      // </button>
+
 .btn {
   display: inline-flex;
   padding-top: 12px;
@@ -92,4 +99,35 @@ ul {
   &:disabled {
     background-color: $btn-disabled;
   }
+  & svg {
+    display: inline-flex;
+    align-self: center;
+    margin-left: 10px;
+    stroke: $black-text-color;
+  }
+  &--transparent {
+    padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 35px;
+  padding-right: 35px;
+  border-width: 1px;
+  border-color: $accent-color;
+  border-style: solid;
+  background-color: transparent;
+  color: $light-title-color;
+  
+  &:hover, &:focus, &:active {
+    border-color: $btn-actions;
+    background-color: transparent;
+  }
+  &:disabled {
+    border-color: $btn-disabled;
+    background-color: transparent;
+  }
+  & svg {
+    stroke: $light-title-color;
+  }
+
+  }
+  
 }
