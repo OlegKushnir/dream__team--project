@@ -1,0 +1,91 @@
+.locations__blocks{
+    background-color: $bg-green;
+}
+
+.locations__headtitle{
+    display: none;
+}
+
+.locations__list{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+}
+
+.locations__item{
+    background: $white-text-color;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+    width: 368px;
+}
+
+.locations__type{
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 186%;
+    letter-spacing: 0.04em;
+    color: $dark-title-color;
+    background: $accent-color;
+    border-radius: 6px;
+    height: 28px;
+    padding: 0 10px;
+    margin-bottom: 32px;
+}
+
+.locations__city{
+    display: block;
+    margin-bottom: 8px;
+}
+
+.locations__coordinate{
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 183%;
+    letter-spacing: 0.04em;
+    color: $red-text-color;
+    margin-bottom: 32px;
+}
+
+.locations__worktime{
+    display: block;
+    padding: 32px 0;
+    border-top: 1px solid #E1E1E1;
+    border-bottom: 1px solid #E1E1E1;
+    margin-bottom: 32px;
+}
+
+.locations__graphic{
+    display: block;
+    margin-bottom: 12px;
+}
+
+.locations__graphic:last-child{
+    margin-bottom: 0;
+}
+
+.locations__days{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 186%;
+    letter-spacing: 0.04em;
+    color: $dark-title-color;
+}
+
+.locations__time{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 186%;
+    color: $btn-disabled;
+}
+
+.locations__contacts{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 183%;
+    color: $red-text-color;
+}
