@@ -25,7 +25,7 @@
         display: flex;
         flex-direction: column;
         background-color: $bg-green;
-        z-index: 50;
+        z-index: 100;
 
         & .logo {
             position: absolute;
@@ -98,7 +98,6 @@
         background-color: inherit;
         border: none;
         padding: 0;
-
         @media screen and (min-width: $desctop) {
             display: none;
         }
@@ -129,21 +128,20 @@
 }
 
 .button-buy {
+    &:hover,
+    &:focus {
+        border-color: $btn-actions;
+    }
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin-left: 31px;
-    height: 42px;
-
+    height: 42px; 
     @include font(14px, 600, 1.21, normal);
 
     @media screen and (max-width: 767px) {
         display: none;
-    }
-
-    &:focus {
-        background-color: $btn-disabled;
     }
 }
 

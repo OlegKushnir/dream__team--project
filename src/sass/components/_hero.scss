@@ -1,6 +1,7 @@
 .hero__container {
     position: relative;
     display: flex;
+
    
     height: 453px;
 
@@ -13,16 +14,56 @@
     } 
 }
 
+.hero__wrapper {
+    flex-basis: 200%;
+}
+
+.hero__box {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    @include font(8px, 400, 1.25, normal);
+    color: $white-text-color;
+
+    @media screen and (min-width: $desctop) {
+        @include font(14px, 400, 1.21, normal);
+    }
+}
+
+.text-part {
+    @include font(28px, 900, 1.41, 0.04em);
+    color: $black-text-color;
+
+    @media screen and (min-width: $desctop) {
+        @include font(46px, 900, 1.21, 0.04em);
+    }
+}
+
 .point-image {
     position: absolute;
     bottom: 0;
     left: 0;
+    pointer-events: none;
+    
+    // @media screen and (min-width: $mobile) {
+    //     bottom: -50;
+    // }
+    
+    // @media screen and (min-width: $tablet) {
+    //     bottom: 0;
+    // }
 }
 
 .ice-cream {
     position: absolute;
     bottom: -53;
     right: 43;
+    pointer-events: none;
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+    
     @media screen and (min-width: $tablet) {
         position: absolute;
         bottom: -55;
@@ -37,7 +78,7 @@
 }
 
 .plate-ice-cream {
-    z-index: 10;
+    pointer-events: none;
     @media screen and (max-width: 767px) {
         display: none;
     }
@@ -52,5 +93,130 @@
         position: absolute;
         bottom: 59;
         left: 14;
+    }
+}
+
+.description {
+    @include font(12px, 400, 1.41, normal);
+    color: $white-text-color;
+    margin-left: 185px;
+    margin-top: 52px;
+    width: 150px;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: $desctop) {
+        @include font(14px, 400, 1.42, normal);
+        margin-left: 241px;
+        margin-top: 105px;
+        width: 200px;
+    }
+}
+
+.description-link {
+    margin-left: 181px;
+    fill: $light-title-color;
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: $desctop) {
+        margin-left: 236px; 
+    }
+}
+
+.icon-arrow {
+    margin-top: 10px;
+}
+
+.hero__box {
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+}
+
+.hero__title {
+    font-family: 'Seymour One', sans-serif;
+    @include font(26px, 400, 1.26, 0.04em);
+    text-transform: uppercase;
+    color: $white-text-color;
+    margin-top: 60px;
+
+    @media screen and (min-width: $tablet) {
+        margin-top: 40px;
+        @include font(18px, 400, 1.27, normal);
+    }
+
+    @media screen and (min-width: $desctop) {
+        @include font(38px, 400, 1.26, 0.04em);
+    }
+}
+
+.title-part {
+    @include font(34px, 400, 0.9, normal);
+
+    @media screen and (min-width: $tablet) {
+        @include font(24px, 400, 1.27, normal);
+    }
+
+    @media screen and (min-width: $desctop) {
+        @include font(38px, 400, 1.26, 0.04em);
+    }
+}
+
+.button-container {
+    display: flex;
+    margin-top: 32px;
+
+    @media screen and (min-width: $tablet) {
+        margin-top: 20px;
+    }
+
+    @media screen and (min-width: $desctop) {
+        margin-top: 28px;
+    }
+}
+
+.first-button {
+    &:hover,
+    &:focus {
+        border-color: $btn-actions;
+    }
+    
+    @include font(8px, 400, 1.12, normal);
+    width: 62px; 
+    height: 24px;
+    border: 2px solid $accent-color;
+    background-color: inherit;
+    border-radius: 8px;
+    padding: 0;
+
+    @media screen and (min-width: $desctop) {
+        @include font(14px, 600, 1.28, normal);
+        width: 138px;
+        height: 44px;
+    }
+}
+
+.second-button {
+    &:hover,
+    &:focus {
+        color: $btn-actions;
+    }
+
+    display: inline-block;
+    @include font(8px, 600, 1.25, normal);
+    border: none;
+    background-color: inherit;
+    color: $accent-color;
+    text-decoration: underline;
+    margin-left: 16px;
+    padding: 0;
+
+    @media screen and (min-width: $desctop) {
+        @include font(14px, 600, 1.21, normal);
+        margin-left: 32px;
     }
 }
