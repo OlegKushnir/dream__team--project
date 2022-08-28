@@ -4,6 +4,7 @@
     height: 582px;
     border: 1px solid black;
 }
+
 .point-image {
     position: absolute;
     bottom: 0;
@@ -27,25 +28,8 @@
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .plate-ice-cream {
-    z-index: 51;
+    z-index: 10;
     @media screen and (max-width: 767px) {
         display: none;
     }
@@ -62,9 +46,3 @@
         left: 14;
     }
 }
-
-// .point-image {
-//     position: absolute;
-//     bottom: 0;
-//     left: 0;
-// }
