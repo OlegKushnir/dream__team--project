@@ -23,7 +23,7 @@
 .footer__left{
     @media screen and (max-width: 767px) {
         margin-bottom: 40px;
-        width: 400px;
+        width: 100%;
     }
     
     @media screen and (min-width: 768px) {
@@ -57,7 +57,10 @@
     color: $light-title-color;
     margin-bottom: 14px;
 
-    @media screen and (max-width: 767px) {}
+    @media screen and (max-width: 767px) {
+        font-weight: 700;
+        font-size: 18px;
+    }
     
     @media screen and (min-width: 768px) {
         font-weight: 700;
@@ -72,6 +75,11 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: $light-title-color;
+
+    @media screen and (max-width: 767px) {
+        font-weight: 700;
+        font-size: 34px;
+    }
 }
 
 .footer__link{
