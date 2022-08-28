@@ -9,6 +9,7 @@
 .locations__list{
     display: flex;
     justify-content: space-between;
+    margin-top: -96px;
     margin-bottom: 64px;
 }
 
@@ -88,4 +89,22 @@
     font-size: 16px;
     line-height: 183%;
     color: $red-text-color;
+}
+
+.locations__btn{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 119px;
+}
+
+.btn-franchise{
+    background: transparent;
+    border: 2px solid $accent-color;
+    border-radius: 10px;
+    color: $light-title-color;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 34px;
+    padding-right: 34px;
+    margin-left: 18px;
 }
