@@ -24,6 +24,8 @@
         width: 100vw;
         display: flex;
         flex-direction: column;
+        background-color: $bg-green;
+        z-index: 50;
 
         & .logo {
             position: absolute;

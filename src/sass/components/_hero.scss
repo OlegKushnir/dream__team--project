@@ -1,0 +1,70 @@
+.hero__container {
+    position: relative;
+    display: flex;
+    height: 582px;
+    border: 1px solid black;
+}
+.point-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.ice-cream {
+    position: absolute;
+    bottom: -53;
+    right: 43;
+    @media screen and (min-width: $tablet) {
+        position: absolute;
+        bottom: -55;
+        right: 25;
+    }
+    
+    @media screen and (min-width: $desctop) {       
+    position: absolute;
+    bottom: -96;
+    right: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.plate-ice-cream {
+    z-index: 51;
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+        position: absolute;
+        bottom: 13;
+        left: 32;
+    }
+
+    @media screen and (min-width: $desctop) {
+        position: absolute;
+        bottom: 59;
+        left: 14;
+    }
+}
+
+// .point-image {
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+// }
