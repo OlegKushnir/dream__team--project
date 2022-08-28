@@ -2,9 +2,10 @@ $(document).ready(function () {
     $('.galary__slide').slick({
       autoplay: true,
       infinite: true,
-      speed: 700,
+      speed: 1000,
       fade: true,
       cssEase: 'linear',
+      arrows: false,
     });
   });
   $(document).ready(function () {
@@ -14,5 +15,7 @@ $(document).ready(function () {
       infinite: true,
       speed: 2000,
       slidesToShow: 1,
+      adaptiveHeight: true,
+      arrows: false,
     });
   });
