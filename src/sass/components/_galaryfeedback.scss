@@ -43,7 +43,8 @@
     }
 
     @media screen and (min-width: 1200px) {
-      height: 1000px;
+      transform: translateY(95px);
+      height: 1015px;
       background-image: url(../images/galary_bg_d.png);
       @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
