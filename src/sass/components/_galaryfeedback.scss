@@ -113,7 +113,8 @@
   background-color: $bg-green;
   border-radius: 24px;
   margin-bottom: 32px;
-  max-width: 368px;
+  width: 99%;
+  
   @include font(12px, 400, 2.55, 0.04em);
   color: $light-title-color;
   text-align: center;
