@@ -1,86 +1,177 @@
 .header__container {
-    display: flex;
-    
     padding-top: 12px;
-    padding-bottom: 11px;
-}
 
-.button-buy {
-    @media screen and (max-width: 767.99px) {
-        display: none;
+    @media screen and (min-width: $tablet) {
+        padding-top: 20px;
+    }
+
+    @media screen and (min-width: $desctop) {
+        padding-top: 17px;
     }
 }
 
-.menu {
-
-
-    @media screen and (max-width: 1199.99px) {
-        display: none;
-        width: 100%;
-        background-color: $bg-green;
-        // padding: 48px 40px;
-    }
+.header__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     &.is-open {
-        display: flex;
-        flex-direction: column;
+        padding: 12px 20px;
         position: fixed;
         top: 0;
         left: 0;
         height: 100vh;
         width: 100vw;
-        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        background-color: $bg-green;
+        z-index: 50;
+
+        & .logo {
+            position: absolute;
+            top: 12;
+            left: 20;
+
+            @media screen and (min-width: $tablet) {
+                top: 20;
+                left: 32;
+            }
+        }
+
+        @media screen and (min-width: $tablet) {
+            padding: 20px 32px;
+        }
+
+        & .button-buy {
+            display: none;
+        }
+
+        & .menu {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            @include font(32px, 700, 1.21, normal);
+            margin-top: 100px;
+
+            @media screen and (min-width: $tablet) {
+                @include font(48px, 700, 1.20, normal);
+                margin-top: 140px;
+            }
+        }
+
+        & .menu__item:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+}
+
+.logo {
+    @media screen and (min-width: $desctop) {
+        margin-right: 268px;
+    }
+}
+
+.menu {
+    @media screen and (min-width: $desctop) {
+        @include font(16px, 700, 1.18, normal);
+    }
+
+    &__list {
+        @media screen and (min-width: $desctop) {
+            display: flex;
+        }
+    }
+
+    &__item:not(:last-child) {
+        @media screen and (min-width: $desctop) {
+            margin-right: 27px;
+        }
+    }
+    
+    @media screen and (max-width: 1199px) {
+        display: none;
+        width: 100%;
+        background-color: $bg-green;
     }
     
     &__button {
         background-color: inherit;
+        border: none;
+        padding: 0;
+
+        @media screen and (min-width: $desctop) {
+            display: none;
+        }
+
+        &.is-open {
+            position: fixed;
+            top: 15;
+            right: 15;
+
+            & .icon-mobile-close {
+                display: block;
+            }
+
+            & .icon-mobile-open {
+                display: none;
+            }
+        }
     }
 
     &__link {
-        @include font(32px, 700, 1.21, normal);
         color: $light-title-color;
     }
+
+    &__link:hover,
+    &__link:focus {
+        color: $black-text-color;
+    }
 }
 
-.menu.is-open .logo {
-    position: fixed;
-    top: 10;
-    left: 10;
-}
-.menu__button {
-    cursor: pointer;
-    border: none;
-    position: fixed;
-    top: 10;
-    right: 10;
+.button-buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 31px;
+    height: 42px;
 
-    &.is-open {
-        position: fixed;
-        top: 15;
-        right: 15;
+    @include font(14px, 600, 1.21, normal);
+
+    @media screen and (max-width: 767px) {
+        display: none;
     }
 
-
+    &:focus {
+        background-color: $btn-disabled;
+    }
 }
 
-.menu__button .icon-mobile-close {
+.icon-button-buy {
+    margin-left: 15px;
+}
+
+.icon-mobile-close {
     display: none;
 }
-
-.menu__button.is-open .icon-mobile-close {
-    display: block;
-}
-
-.menu__button.is-open .icon-mobile-open {
-    display: none;
-}
-
 
 .icon-mobile-open,
 .icon-mobile-close {
     fill: $white-text-color;
-} 
+}
 
-.modal {
+.first-wrapper {
+    @media screen and (min-width: $desctop) {
+        display: flex;
+        
+        align-items: center;
+    }
+}
+
+.second-wrapper {
+    display: flex;
+}
+
+.backdrop {
     display: none;
 }
