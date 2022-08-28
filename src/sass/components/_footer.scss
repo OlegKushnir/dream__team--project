@@ -2,6 +2,35 @@
     background-color: $bg-green;
 }
 
+.footer__content{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #E1E1E1;
+
+    @media screen and (max-width: 767px) {
+        display: block;
+    }
+    
+    @media screen and (min-width: 768px) {
+        padding-bottom: 32px;
+    }
+}
+
+.footer__left{
+    @media screen and (max-width: 767px) {
+        margin-bottom: 40px;
+    }
+    
+    @media screen and (min-width: 768px) {
+        width: 400px;
+    }
+}
+
+.footer__right{
+    display: block;
+}
+
 .footer-title{
     font-weight: 400;
     font-size: 30px;
@@ -9,6 +38,14 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: $light-title-color;
+    margin-bottom: 14px;
+
+    @media screen and (max-width: 767px) {}
+    
+    @media screen and (min-width: 768px) {
+        font-weight: 700;
+        font-size: 26px;
+    }
 }
 
 .footer-subtitle{
@@ -18,4 +55,74 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: $light-title-color;
+}
+
+.footer__link{
+    margin-right: 30px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.footer__circle{
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    background-color: $accent-color;
+}
+
+.footer__circle svg{
+    fill: $bg-green;
+    margin: auto;
+
+    @media screen and (max-width: 767px) {
+        fill:$light-title-color;
+    }
+}
+
+.footer__list{
+    display: flex;
+    justify-content: right;
+    margin-top: 10px;
+    margin-bottom: 50px;
+
+    @media screen and (max-width: 767px) {
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+    
+    @media screen and (min-width: 768px) {
+        margin-top: 100px;
+        margin-bottom: 32px;
+    }
+}
+
+.footer__text{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 186%;
+    text-align: right;
+    color: #000000;
+}
+
+.footer__copyright{
+    text-align: center;
+    padding-top:12px;
+    padding-bottom: 11px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 186%;
+    letter-spacing: 0.02em;
+    color: #7A7A7A;
+
+    @media screen and (max-width: 767px) {
+        max-width: 133px;
+        margin: 0 auto;
+    }
+}
+
+.footer__tel{
+    color: $white-text-color;
 }
