@@ -1,8 +1,16 @@
 .hero__container {
     position: relative;
     display: flex;
-    height: 582px;
-    border: 1px solid black;
+   
+    height: 453px;
+
+    @media screen and (min-width: $tablet) {
+        height: 351px;
+    }
+    
+    @media screen and (min-width: $desctop) {
+        height: 582px;
+    } 
 }
 
 .point-image {
