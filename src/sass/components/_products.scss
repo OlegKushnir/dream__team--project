@@ -166,10 +166,6 @@ text-align: center;
 &__button {
     padding-bottom: 45px;
 }
-&__svg {
-  
-}
-
 }
 }
 
@@ -212,7 +208,7 @@ text-align: center;
             margin-top: 63px;
           }
           &:nth-child(3) .Products__button {
-            margin-top: 83px;
+            margin-top:auto;
           }
     }
     &__box::before {
@@ -233,7 +229,6 @@ text-align: center;
     &__wrapper {
         padding-left: 26px;
         padding-right: 26px;
-        // min-height: 292px;
     }
     &__subject {
         @include font(34px, 400, 1.26, 0.04em);
