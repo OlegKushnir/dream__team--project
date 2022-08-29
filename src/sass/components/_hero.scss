@@ -1,7 +1,6 @@
 .hero__container {
     position: relative;
     display: flex;
-
     height: 453px;
 
     @media screen and (min-width: $tablet) {
@@ -71,17 +70,14 @@
     }
 
     @include font(8px, 400, 1.12, normal);
-    width: 62px;
-    height: 24px;
+
     border: 2px solid $accent-color;
     background-color: inherit;
     border-radius: 8px;
-    padding: 0;
+    padding: 10px 15px;
 
     @media screen and (min-width: $desctop) {
         @include font(14px, 600, 1.28, normal);
-        width: 138px;
-        height: 44px;
     }
 }
 
@@ -90,6 +86,7 @@
     &:focus {
         color: $btn-actions;
     }
+    padding: 10px 15px;
 
     display: inline-block;
     @include font(8px, 600, 1.25, normal);
@@ -98,7 +95,7 @@
     color: $accent-color;
     text-decoration: underline;
     margin-left: 16px;
-    padding: 0;
+
 
     @media screen and (min-width: $desctop) {
         @include font(14px, 600, 1.21, normal);
@@ -147,19 +144,27 @@
     display: flex;
     flex-direction: column;
     text-align: end;
-    @include font(8px, 400, 1.25, normal);
-    color: $white-text-color;
+    
 
     @media screen and (max-width: 767px) {
         display: none;
     }
+}
+
+.hero__text {
+    width: 46px;
+    
+    @include font(8px, 400, 1.25, normal);
+    color: $white-text-color;
 
     @media screen and (min-width: $desctop) {
         @include font(14px, 400, 1.21, normal);
+        width: 79px;
     }
 }
 
 .text-part {
+    display: block;
     @include font(28px, 900, 1.41, 0.04em);
     color: $black-text-color;
 
@@ -169,8 +174,7 @@
 }
 
 .plate-ice-cream {
-    pointer-events: none;
-
+    z-index: -10;
     @media screen and (max-width: 767px) {
         display: none;
     }
@@ -192,14 +196,14 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    pointer-events: none;
+    z-index: -10;
 }
 
 .ice-cream {
     position: absolute;
-    bottom: -53;
-    right: 43;
-    pointer-events: none;
+    bottom: -53px;
+    right: 43px;
+    z-index: -10;
     @media screen and (max-width: 767px) {
         display: none;
     }

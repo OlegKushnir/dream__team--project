@@ -13,7 +13,6 @@
 .header__box { 
     display: flex;
     justify-content: space-between;
-    align-items: center;
 
     &.is-open {
         padding: 12px 20px;
@@ -45,23 +44,6 @@
         & .button-buy {
             display: none;
         }
-
-        & .menu {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            @include font(32px, 700, 1.21, normal);
-            margin-top: 100px;
-
-            @media screen and (min-width: $tablet) {
-                @include font(48px, 700, 1.20, normal);
-                margin-top: 140px;
-            }
-        }
-
-        & .menu__item:not(:last-child) {
-            margin-bottom: 32px;
-        }
     }
 }
 
@@ -72,8 +54,20 @@
 }
 
 .menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    @include font(32px, 700, 1.21, normal);
+    margin-top: 100px;
+
+    @media screen and (min-width: $tablet) {
+        @include font(48px, 700, 1.20, normal);
+        margin-top: 140px;
+    }
+
     @media screen and (min-width: $desctop) {
         @include font(16px, 700, 1.18, normal);
+        margin-top: 0;
     }
 
     &__list {
@@ -87,13 +81,12 @@
             margin-right: 27px;
         }
     }
-    
-    @media screen and (max-width: 1199px) {
-        display: none;
-        width: 100%;
-        background-color: $bg-green;
+
+    &__link {
+        padding: 16px 0;
+        display: block;
     }
-    
+        
     &__button {
         background-color: inherit;
         border: none;
