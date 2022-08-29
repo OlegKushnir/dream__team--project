@@ -13,6 +13,6 @@
   });
 })();
 $('.menu__link').click(function () {
-  $('.header__box').removeClass('is-open');
+  $('.menu').removeClass('is-open');
   $('.menu__button').removeClass('is-open');
 });
