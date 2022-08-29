@@ -1,18 +1,18 @@
 .header__container {
     display: flex;
     justify-content: space-between;
-    padding-top: 12px;
     position: relative;
+    padding-top: 12px;
 
     @media screen and (min-width: $tablet) {
         padding-top: 20px;
     }
 
     @media screen and (min-width: $desctop) {
-        padding-top: 17px;
         align-items: center;
+        padding-top: 0;
     }
-}
+} 
 
 .logo {
     z-index: 110;
@@ -20,7 +20,6 @@
 
 .menu {
     display: flex;
-    flex-direction: column;
     text-align: center;
 
     position: fixed;
@@ -37,16 +36,29 @@
 
     z-index: 100;
 
-    &.is-open {
-        transform: translateX(0);
-    }
-
     @media screen and (min-width: $tablet) {
         padding-top: 120px;
     }
 
     @media screen and (min-width: $desctop) {
-        display: flex;
+        position: static;
+        height: auto;
+        width: auto;
+        padding: 0;
+        background-color: transparent;
+        transform: translateX(0);
+    }
+
+    &.is-open {
+        transform: translateX(0);
+    }
+
+    &__list {
+        width: 100%;
+        
+        @media screen and (min-width: $desctop) {
+           display: flex;
+        }
     }
 
     &__item:not(:last-child) {
@@ -67,7 +79,8 @@
 
         @media screen and (min-width: $desctop) {
             @include font(16px, 700, 1.18, normal);
-            padding: 0;
+            padding-top: 40px;
+            padding-bottom: 22px;
         }
     }
 
