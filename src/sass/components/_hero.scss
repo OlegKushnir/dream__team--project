@@ -69,15 +69,16 @@
         border-color: $btn-actions;
     }
 
-    @include font(8px, 400, 1.12, normal);
+    @include font(8px, 600, 1.12, normal);
 
     border: 2px solid $accent-color;
     background-color: inherit;
     border-radius: 8px;
-    padding: 10px 15px;
+    padding: 9px 15px;
 
     @media screen and (min-width: $desctop) {
         @include font(14px, 600, 1.28, normal);
+        padding: 12px 36px;
     }
 }
 
@@ -86,23 +87,24 @@
     &:focus {
         color: $btn-actions;
     }
-    padding: 10px 15px;
-
-    display: inline-block;
+    
     @include font(8px, 600, 1.25, normal);
+    
     border: none;
     background-color: inherit;
     color: $accent-color;
     text-decoration: underline;
+    
     margin-left: 16px;
-
+    padding: 9px 15px;
 
     @media screen and (min-width: $desctop) {
         @include font(14px, 600, 1.21, normal);
         margin-left: 32px;
+        padding: 12px 36px;
     }
 }
-
+ 
 .description {
     @include font(12px, 400, 1.41, normal);
     color: $white-text-color;
