@@ -12,3 +12,7 @@
     mobileMenuRef.classList.toggle("is-open");
   });
 })();
+$('.menu__link').click(function () {
+  $('.header__box').removeClass('is-open');
+  $('.menu__button').removeClass('is-open');
+});
