@@ -140,3 +140,15 @@
   .modal__btn {
     margin: 0 auto;
     }
+
+    .read__text {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.18;
+      letter-spacing: 0.04em;
+      margin-bottom: 10px;
+      @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.82;
+    }
+  }
