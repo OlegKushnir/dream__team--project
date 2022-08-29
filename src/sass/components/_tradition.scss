@@ -9,7 +9,7 @@
     flex-direction: column;
     justify-content: flex-start;
     
-    padding-right: 20px;
+    // padding-right: 20px;
     padding-top: 60px;
 
     @media screen and (min-width: 768px) {
@@ -113,6 +113,8 @@
 .about-cow {
     max-width: 278px;
     margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
 
     background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
     box-shadow: 0px 8px 55px rgb(153 114 23 / 25%);
@@ -122,12 +124,13 @@
         max-width: none;
         width: 100%;
         margin-bottom: 0;
+        margin-left: 0;
         margin-right: 36px;
     }
 
     @media screen and (min-width: 1200px) {
         width: 490px;
-        margin-right: 108px;
+        margin-right: 100px;
     }
 }
 
