@@ -40,14 +40,17 @@ height: 100%;
     border-radius: 50%;
 }
     &__subject {
+      text-transform: uppercase;
         font-family: 'Seymour One';
         color: $dark-title-color;
     }
 &__span {
+  text-transform: uppercase;
     font-family: 'Montserrat';
     color: $dark-title-color;
 }
 &__titel {
+  text-transform: uppercase;
     font-family: 'Montserrat';
     color: $dark-title-color;
 }
@@ -83,7 +86,7 @@ font-family: 'Montserrat';
  
     background-image: url(/src/images/ico_cream_1200px_x1.jpg)  ;
     background-size: cover;
- 
+  
     &__list{
         width: 368px;
         // height: 535px;
