@@ -104,20 +104,30 @@
     }
 }
 
-.footer__link{
-    margin-right: 30px;
-
-    &:last-child {
-        margin-right: 0;
-    }
-}
-
 .footer__circle{
     width: 34px;
     height: 34px;
     border-radius: 50%;
     display: flex;
     background-color: $accent-color;
+}
+
+.footer__icon{
+    margin: auto;
+
+    &:hover,
+    &::after,
+    &:focus{
+        fill: $light-title-color;
+    }
+
+    @media screen and (max-width: 767px) {
+        &:hover, 
+        &::after, 
+        &:focus{
+            fill: $bg-green;
+        }
+    }
 }
 
 .footer__circle svg{
@@ -145,6 +155,14 @@
     @media screen and (min-width: 1200px) {
         margin-top: 10px;
         margin-bottom: 50px;
+    }
+}
+
+.footer__item{
+    margin-right: 30px;
+    
+    &:last-child {
+        margin-right: 0;
     }
 }
 
@@ -201,4 +219,8 @@
 
 .footer__tel{
     color: $white-text-color;
+
+    &:hover, &:focus, &:active {
+        color: $accent-color;
+    }
 }
