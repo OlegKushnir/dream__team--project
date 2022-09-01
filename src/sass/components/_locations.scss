@@ -2,10 +2,6 @@
     background-color: $bg-green;
 }
 
-.locations__headtitle{
-    display: none;
-}
-
 .locations__list{
     @media screen and (max-width: 767px) {
         display: flex;
@@ -61,6 +57,7 @@
 
 .locations__type{
     display: inline-block;
+    text-transform: uppercase;
     font-weight: 500;
     font-size: 16px;
     line-height: 186%;
